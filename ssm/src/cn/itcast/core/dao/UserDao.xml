@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itcast.core.dao.UserDao">
+	<select id="save" parameterType="cn.itcast.core.pojo.User">
+		INSERT INTO `ssm`.`user` (
+		`name`, `birthday`)
+		VALUES
+		(#{name}, #{birthday}) ;
+	</select>
+	<select id="findAll" resultType="cn.itcast.core.pojo.User">
+		SELECT
+		*
+		FROM
+		`ssm`.`user`
+	</select>
+</mapper>
